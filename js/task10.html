@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <script>
+        console.log("concat method: ")
+        const a1 = [10, 20, 30]
+        const a2 = [40, 50, 60]
+        const b = a1.concat(a2);
+        console.log(b);
+        console.log("copywithin method")
+        const b1 = [40, 50, 60, 10, 20, 30]
+        console.log(b1.copyWithin(0, 3, 6))
+        console.log("map method: ")
+        let array = [10, 20, 30];
+        let newArray = array.map(element => element);
+        console.log(newArray);
+        console.log("every method")
+        function isEven(element, index, array) {
+            return element % 2 == 0;
+        }
+        function func() {
+            let arr = [56, 92, 18, 88, 12];
+            let value = arr.every(isEven);
+            console.log(value);
+        }
+        func();
+        console.log("some method")
+        function isGreaterThan5(element, index, array) {
+            return element > 5;
+        }
+        function func() {
+            let array = [2, 5, 8, 1, 4];
+            let value = array.some(isGreaterThan5);
+            console.log(value);
+        }
+        func();
+        console.log("filter method")
+        let numbers = [20, 30, 45, 55, 20, 30];
+        function checkmultiple(number) {
+            if (number % 10 == 0)
+                return true;
+            else
+                return false;
+        }
+        let multiple = numbers.filter(checkmultiple);
+        console.log(multiple);
+        console.log("find method")
+        let ar = [10, 20, 13, 14]
+        let found = ar.find((element) => {
+            return element > 10
+        })
+        console.log(found)
+        console.log("findIndex method")
+        let idx = ar.findIndex((element) => {
+            return element > 10
+        })
+        console.log(idx)
+        console.log("index of method")
+        function func() {
+            let str = 'Departed Train';
+            let index = str.indexOf('Train');
+            console.log(index);
+        }
+        func();
+        console.log("lastIndexOf method")
+        function func() {
+            let str = 'LetsLearnJavascript';
+            let index = str.lastIndexOf('Java');
+            console.log(index);
+        }
+        func();
+        console.log("push method")
+        let array1 = [10,20,30,10,20,30]
+        array1.push(100)
+        console.log(array1)
+        console.log("pop method")
+        array1.pop(100)
+        console.log(array1)
+        console.log('shift method')
+        array1.shift()
+        console.log(array1)
+    </script>
+</body>
+
+</html>
