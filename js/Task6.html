@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border: 2px solid black;
+        width: 30%;
+    }
+</style>
+<body>
+    <div class="container">
+        <label>1st Number:</label>
+        <input type="number" id="one"><br>
+        <label>2nd Number:</label>
+        <input type="number" id="sec"><br><br>
+        <button onclick="Mul()">Multiply</button>
+        <button onclick="Div()">Divide</button>
+        <h3>The Result is:</h3>
+        <h3 id="result"></h3>
+    </div>
+</body>
+<script>
+    function Mul(){
+        first=document.getElementById("one");
+        second=document.getElementById("sec");
+        result=document.getElementById("result");
+        result.innerHTML=(first.value)*(second.value);
+    }
+    function Div(){
+        first=document.getElementById("one");
+        second=document.getElementById("sec");
+        result=document.getElementById("result");
+        result.innerHTML=(first.value)/(second.value);
+    }
+</script>
+</html>

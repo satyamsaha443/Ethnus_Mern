@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        margin-top: 15%;
+        margin-left: 30%;
+        width: 40%;
+        display: flex;
+        column-gap: 50%;
+    }
+
+    .btn {
+        height: 50px;
+        width: 140px;
+    }
+    h3{
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-size: larger;
+       font-stretch: expanded;
+    }
+    
+</style>
+
+<body>
+    <div class="container">
+        <div class="InnerContainer"> 
+            <button class="btn" id="date" onclick="Datee()">Show Date</button>
+            <h3 id="Hdate"></h3>
+        </div>
+        <div class="InnerContainer">
+            <button class="btn" id="time" onclick="Timee()">Show Time</button>
+            <h3 id="Htime"></h3>
+        </div>
+    </div>
+</body>
+<script>
+    function Datee(){
+        const text=document.getElementById("Hdate");
+        const today=new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        text.innerHTML=date;
+    }
+    function Timee(){
+        const text=document.getElementById("Htime");
+        const today=new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        text.innerHTML=time;
+    }
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+        margin-left: 20%;
+    }
+
+    input {
+        width: 40%;
+        height: 30px;
+    }
+
+    textarea {
+        width: 40%;
+    }
+</style>
+
+<body>
+    <form>
+        <div>
+        <label for="name">Name:</label>
+            <input type="text" name="name" id="name"><br>
+            <h3 id="Hname"></h3>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"><br>
+            <h3 id="Hemail"></h3>
+        </div>
+        <div>
+            <label for="web">Website:</label>
+            <input type="url" name="web" id="web"><br>
+            <h3 id="Hweb"></h3>
+        </div>
+        <div>
+            <label for="msg">Message:</label>
+            <textarea name="msg" id="msg"></textarea>
+            <h3 id="Hmsg"></h3>
+        </div>
+        <input type="button" value="Submit" onclick="fun()">
+    </form>
+</body>
+<script>
+    function fun(){
+        const name=document.getElementById("name");
+        const email=document.getElementById("email");
+        const web=document.getElementById("web");
+        const msg=document.getElementById("msg");
+        console.log(name.value.length);
+        if(name.value.length==0){
+            const Hname=document.getElementById("Hname");
+            Hname.innerHTML="This field is required";
+            Hname.style.color="red";
+            name.border="red";
+        }
+        if(email.value.length==0){
+            const Hemail=document.getElementById("Hemail");
+            Hemail.innerHTML="A valid email Address is required";
+            Hemail.style.color="red";
+            email.border="red";
+        }
+        if(web.value.length==0){
+            const Hname=document.getElementById("Hweb");
+            Hweb.innerHTML="A valid url is required";
+            Hweb.style.color="red";
+            web.border="red";
+        }
+        if(msg.value.length==0){
+            const Hname=document.getElementById("Hmsg");
+            Hmsg.innerHTML="This field is required";
+            Hmsg.style.color="red";
+            msg.border="red";
+        }
+    }
+</script>
+</html>
